@@ -1,0 +1,17 @@
+import PropTypes from 'prop-types'
+import Button from './Button'
+
+
+export const Header = ({onForm, btnColor}) => {
+   
+    return (
+        <header className="header">
+           <h1>Header</h1> 
+           <Button onClick={onForm} 
+           //if btnColor then btn color red add else blue
+           color={btnColor? 'red' : 'blue'} 
+           //if btnColor then btn will display add else close
+           text={btnColor? 'close form' : 'open form'}/>
+        </header>
+    )
+}
