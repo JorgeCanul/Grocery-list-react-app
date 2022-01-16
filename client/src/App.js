@@ -3,8 +3,8 @@ import { Header } from "./components/Header";
 import Groceries from "./components/Groceries";
 import { useState, useEffect } from 'react';
 import { AddTaskForm } from "./components/AddTaskForm";
-import { getTasks } from "./actions/tasksActions";
-import axios from "axios";
+import { deleteTask, getTasks } from "./actions/tasksActions";
+
 
 
 function App() {
@@ -40,7 +40,7 @@ const toggleReminder = (id) => {
       <Header onForm={() => setToggleForm(!toggleForm)}
       btnColor={toggleForm}/>
       {toggleForm && <AddTaskForm />}
-      <Groceries onDelete={deleteTask} 
+      <Groceries  
         onToggle={toggleReminder}
       tasks={tasks}/>
     </div>
