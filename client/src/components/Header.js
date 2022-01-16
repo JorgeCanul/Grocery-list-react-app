@@ -6,7 +6,7 @@ export const Header = ({onForm, btnColor}) => {
    
     return (
         <header className="header">
-           <h1>Header</h1> 
+           <h1>Grocery List</h1> 
            <Button onClick={onForm} 
            //if btnColor then btn color red add else blue
            color={btnColor? 'red' : 'blue'} 

@@ -1,13 +1,16 @@
 import Grocerie from '../Groceri'
 
 const Groceries = ({tasks, onDelete, onToggle}) => {
-console.log(tasks)
+    let items
+    if(tasks.length > 0) {
+        items = tasks.map(tasks => (
+            <Grocerie key={tasks._id} onDelete={onDelete}
+            onToggle={onToggle} tasks={tasks}/>
+        ))
+    }
     return (
         <>
-         {tasks.map(tasks => (
-             <Grocerie key={tasks.id} onDelete={onDelete}
-             onToggle={onToggle} tasks={tasks}/>
-         ))} 
+        { items }
         </>
     )
 }

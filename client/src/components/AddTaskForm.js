@@ -1,6 +1,8 @@
-import { useState } from "react"
+import { useState } from "react";
+import { creatTask } from "../actions/tasksActions";
 
-export const AddTaskForm = ({ onAdd }) => {
+
+export const AddTaskForm = () => {
     const [ text, setText ] = useState('');
     const [ day, setDay ] = useState('');
     const [ reminder, setReminder ] = useState(false);
@@ -12,7 +14,7 @@ export const AddTaskForm = ({ onAdd }) => {
             return
         }
 
-        onAdd({text, day, reminder});
+        creatTask({text, day, reminder});
         setText('');
         setDay('');
         setReminder(false);
@@ -21,7 +23,7 @@ export const AddTaskForm = ({ onAdd }) => {
         <form className="add-form" action=""
         onSubmit={onSubmit}>
            <div className="form-control"  >
-               <label htmlFor="">Task</label>
+               <label htmlFor="">Store</label>
                <input type="text" placeholder="Add Task" 
                value={text} onChange={(e) => setText(e.target.value)}/>
            </div>
@@ -37,7 +39,7 @@ export const AddTaskForm = ({ onAdd }) => {
                value={text} 
                onChange={(e) => setReminder(e.currentTarget.checked)}/>
            </div>
-           <input className="btn btn-block" type="submit" value='Save Task'/>
+           <input className="btn btn-block" type="submit" value='Save List'/>
         </form>
     )
 }
