@@ -24,12 +24,12 @@ export const AddTaskForm = () => {
         onSubmit={onSubmit}>
            <div className="form-control"  >
                <label htmlFor="">Store</label>
-               <input type="text" placeholder="Add Task" 
+               <input type="text" placeholder="Store" 
                value={text} onChange={(e) => setText(e.target.value)}/>
            </div>
            <div className="form-control"  >
-               <label htmlFor="">Day</label>
-               <input type="text" placeholder="Add Day" 
+               <label htmlFor="">Item</label>
+               <input type="text" placeholder="Add Item" 
                value={day} onChange={(e) => setDay(e.target.value)}/>
            </div>
            <div className="form-control form-control-check"  >
