@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  
 }
 
 .container {
@@ -18,6 +19,11 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+  position: relative;
+  background: linear-gradient(rgba(122, 121, 121, 0.7), rgba(78, 77, 77, 0.7)), url("../../client/public/img/shopping.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+
 }
 
 .header {
@@ -54,6 +60,23 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 575.98px) {
+  .btn {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3)
+{
+  .btn {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
+
 .task {
   background: #f4f4f4;
   margin: 5px;
@@ -62,7 +85,7 @@ body {
 }
 
 .task.reminder {
-  border-left: 5px solid green;
+  border-left: 15px solid rgb(3, 114, 101);
 }
 
 .task h3 {
