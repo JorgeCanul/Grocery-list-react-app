@@ -33,7 +33,7 @@ export const AddTaskForm = () => {
                value={day} onChange={(e) => setDay(e.target.value)}/>
            </div>
            <div className="form-control form-control-check"  >
-               <label htmlFor="">Reminder</label>
+               <label htmlFor="">Add Reminder</label>
                <input type="checkbox"
                checked={reminder}
                value={text} 

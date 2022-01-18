@@ -1,11 +1,7 @@
-
 import { Header } from "./components/Header";
 import Groceries from "./components/Groceries";
 import { useState, useEffect } from 'react';
 import { AddTaskForm } from "./components/AddTaskForm";
-import { deleteTask, getTasks } from "./actions/tasksActions";
-
-
 
 function App() {
   const [ toggleForm, setToggleForm ] = useState(false);
@@ -22,12 +18,6 @@ function App() {
       .catch(() => console.log('Error getting tasks'));
   }, [tasks]);
 
-
-// Delete Task
-const deleteTask = (id) => {
-  // recreate the state by filtering the id we are passing and not showing it
-  setTasks(tasks.filter((task) => task._id !== id));
-}
 
 // Toggle reminder
 const toggleReminder = (id) => {
