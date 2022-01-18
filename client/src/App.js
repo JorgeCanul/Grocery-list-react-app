@@ -20,7 +20,7 @@ function App() {
         setTasks([...tasks]);
       })
       .catch(() => console.log('Error getting tasks'));
-  }, []);
+  }, [tasks]);
 
 
 // Delete Task
